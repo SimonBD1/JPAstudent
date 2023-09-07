@@ -19,12 +19,12 @@ public class InitData implements CommandLineRunner {
         s1.setName("Hans");
         s1.setBorndate(LocalDate.of(1999, 1, 1));
         s1.setBorntime(LocalTime.of(12, 0));
+        studentRepository.save(s1);
 
         Student s2 = new Student();
         s2.setName("Grethe");
         s2.setBorndate(LocalDate.of(1999, 1, 1));
         s2.setBorntime(LocalTime.of(12, 0));
-        studentRepository.save(s1);
         studentRepository.save(s2);
     }
 }

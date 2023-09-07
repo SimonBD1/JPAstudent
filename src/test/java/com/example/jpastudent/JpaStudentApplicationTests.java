@@ -24,9 +24,9 @@ class JpaStudentApplicationTests {
     }
 
     @Test
-    void testOneStudent() {
-        List<Student> lst = studentRepository.findAll();
-        assert(lst.size() == 1);
+    void testOneHans() {
+        List<Student> lst = studentRepository.findAllByName("Hans");
+        assert (lst.size() == 1);
     }
 
 }

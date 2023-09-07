@@ -11,12 +11,13 @@ import java.time.LocalTime;
 @Entity
 public class Student {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private LocalDate borndate;
     private LocalTime borntime;
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public int getId() {
         return id;
     }
